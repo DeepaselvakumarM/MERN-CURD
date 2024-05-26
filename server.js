@@ -24,9 +24,9 @@ router.get('/signin', (req, res) => {
     res.render('signin');
 });
 router.post('/signin', async (req, res) => {
-    const { email, password } = req.body;
+    const { name,email, password } = req.body;
     try {
-        const newStudent = new student({ email, password });
+        const newStudent = new student({ name,email, password });
         await newStudent.save();
         console.log('signed successfully:', newStudent);
         res.redirect('/login');
@@ -43,8 +43,8 @@ router.post('/login', async (req, res) => {
     try {
       
         const user = await student.findOne({ email, password });
-        if (student) {
-            console.log('User logged in:', student);
+        if (user) {
+            console.log('User logged in:', student.email);
             res.redirect('/stuform');
         } else {
             res.send('Invalid email or password');
@@ -57,6 +57,10 @@ router.post('/login', async (req, res) => {
 router.get('/stuform', (req, res) => {
     res.render('stuform');
 });
+
+router.post('/submit',(req,res)=>{
+    res.send("submitted sucessfully 👍🏻")
+})
 app.use(router);
 app.listen(port, () => {
     console.log(`The server is listening on port ${port}`);

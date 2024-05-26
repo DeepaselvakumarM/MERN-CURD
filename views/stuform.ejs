@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Sign Up</title>
+    <style>
+        body{
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        div{
+            padding-bottom: 10px;
+        }
+        button{
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: gray;
+        }
+    </style>
 </head>
 <body>
-    <h1>Student Sign Up</h1>
+    
     <form action="/submit" method="post">
+        <h1>Student Details</h1>
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -24,7 +43,7 @@
             <label for="age">Age:</label>
             <input type="number" id="age" name="age" required>
         </div>
-        <button type="submit"><a href='/signin'>submit</a></button>
+        <button  type="submit">submit</button>
     </form>
 </body>
 </html>

@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        body{
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            
+        }
+        div{
+            padding-bottom: 10px;
+        }
+        button{
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: gray;
+        }
+    </style>
 </head>
 <body>
     <h1>Login</h1>
     <form action="/login" method="post">
-        <div>
-            <label for="name">Name:</label>
-            <input type="name" id="name" name="name" required>
-        </div>
         <div>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>

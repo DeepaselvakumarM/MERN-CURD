@@ -19,7 +19,6 @@ app.use(session({
     cookie: { secure: false } 
 }));
 
-
 mongoose.connect('mongodb://localhost:27017/studentForm')
 .then(() => {
     console.log('Connected to MongoDB');

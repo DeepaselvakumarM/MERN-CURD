@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const router = express.Router();
 const model=require('./model')
-const port = process.env.PORT || 7000;
+const port = process.env.PORT || 7001;
 const signin=require('./views/signin')
 
 // Middleware

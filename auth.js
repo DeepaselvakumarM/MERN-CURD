@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express')
 const router = express.Router();
 const Student = require('../models/student');
 const StudentForm = require('../models/studentForm');
@@ -84,3 +84,4 @@ router.get('/profile', async (req, res) => {
 });
 
 module.exports = router;
+
